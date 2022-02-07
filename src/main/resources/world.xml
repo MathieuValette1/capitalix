@@ -272,7 +272,7 @@
     <managers>
         <pallier>
             <name>Ordralfabétix</name>
-            <logo>str1234</logo>
+            <logo>src/main/webapp/icones/ordralphabetix.gif</logo>
             <seuil>500</seuil>
             <idcible>1</idcible>
             <ratio>1</ratio>
