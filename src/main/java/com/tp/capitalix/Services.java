@@ -1,6 +1,6 @@
 package com.tp.capitalix;
 
-import com.tp.capitalix.generated.World;
+import generated.World;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
