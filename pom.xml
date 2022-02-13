@@ -38,14 +38,15 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-runtime</artifactId>
-			<version>2.3.3</version>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.glassfish.jaxb</groupId>
-			<artifactId>jaxb-core</artifactId>
-			<version>2.3.0.1</version>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.1</version>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
 
