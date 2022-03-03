@@ -96,6 +96,7 @@ public class Services {
         } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production
+            product.setTimeleft(product.getVitesse());
         }
         // sauvegarder les changements du monde
         this.saveWorldToXml(world, username);
