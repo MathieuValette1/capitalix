@@ -1,8 +1,6 @@
 package com.tp.capitalix;
 
-import generated.ProductType;
-import generated.ProductsType;
-import generated.World;
+import generated.*;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
@@ -12,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.Objects;
 
 public class Services {
 
@@ -106,11 +105,58 @@ public class Services {
     ProductType findProductById(World world, Integer id){
         ProductsType productsType = world.getProducts();
         List<ProductType> list_of_product = productsType.getProduct();
-        ProductType product_to_return = new ProductType();
+        ProductType product_to_return;
         for (ProductType product: list_of_product){
             if (product.getId() == id){
                 product_to_return = product;
                 return product_to_return;
+            }
+        }
+        return null;
+    }
+
+    // prend en paramètre le pseudo du joueur et le manager acheté.
+    // renvoie false si l’action n’a pas pu être traitée
+    public Boolean updateManager(String username, PallierType newmanager) {
+        // aller chercher le monde qui correspond au joueur
+        World world = getWorld(username);
+        // trouver dans ce monde, le manager équivalent à celui passé
+        // en paramètre
+        PallierType manager = findManagerByName(world, newmanager.getName());
+        if (manager == null) {
+            return false;
+        }
+
+        // débloquer ce manager
+        manager.setUnlocked(true);
+        // trouver le produit correspondant au manager
+        ProductType product = findProductById(world, manager.getIdcible());
+        if (product == null) {
+            return false;
+        }
+        // débloquer le manager de ce produit
+        product.setManagerUnlocked(true);
+
+        // soustraire de l'argent du joueur le cout du manager
+        double player_money = world.getMoney();
+        int manager_cost = manager.getSeuil();
+        double new_player_money = player_money - manager_cost;
+        world.setMoney(new_player_money);
+
+        // sauvegarder les changements au monde
+        this.saveWorldToXml(world, username);
+        return true;
+    }
+
+    PallierType findManagerByName(World world, String managerName){
+        PalliersType palliersType = world.getManagers();
+        List<PallierType> listOfManager = palliersType.getPallier();
+        PallierType manager_to_return;
+
+        for(PallierType manager: listOfManager){
+            if (Objects.equals(manager.getName(), managerName)){
+                manager_to_return = manager;
+                return manager_to_return;
             }
         }
         return null;
