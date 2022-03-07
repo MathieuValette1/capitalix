@@ -206,5 +206,34 @@ public class Services {
         return world.getLastupdate() - System.currentTimeMillis();
     }
 
+    public boolean updateUpgrade(String username, String pallierName){
+        /// Achat d'un upgrade
+        /// Il débloque l'upgrade si le joueur a assez d'argent
+        /// Il faut déduire le prix de l'upgrade au score du joueur
+        World world = getWorld(username);
+        PallierType upgrade = this.findUpgradeByName(pallierName);
+        if (world.getMoney() >= upgrade.getSeuil()){
+            // Le joueur a assez d'argent
+            upgrade.setUnlocked(true);
+            world.setMoney(world.getMoney()-upgrade.getSeuil());
+            return true;
+        }
+        return false;
+    }
+
+    PallierType findUpgradeByName(String upgradeName){
+        PalliersType palliersType = world.getUpgrades();
+        List<PallierType> listOfUpgrade = palliersType.getPallier();
+        PallierType upgrade_to_return;
+
+        for(PallierType manager: listOfUpgrade){
+            if (Objects.equals(manager.getName(), upgradeName)){
+                upgrade_to_return = manager;
+                return upgrade_to_return;
+            }
+        }
+        return null;
+    }
+
 
 }
