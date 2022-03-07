@@ -60,6 +60,7 @@ public class Services {
 
     World getWorld(String username){
         World world = this.readWorldFromXml(username);
+        this.update_player_score(world);
         this.saveWorldToXml(world, username);
         return world;
     }
@@ -161,4 +162,49 @@ public class Services {
         }
         return null;
     }
+
+    void update_player_score(World world){
+
+        long time_since_last_update = this.get_time_since_last_update(world);
+        world.setLastupdate(System.currentTimeMillis());
+        double score_to_add = 0;
+
+        ProductsType productsType = world.getProducts();
+        List<ProductType> list_of_product = productsType.getProduct();
+
+        for (ProductType product: list_of_product){
+            if (product.isManagerUnlocked()){
+                /// Le produit a un manager
+                long nb_creation = time_since_last_update /  product.getVitesse();
+                if (nb_creation > 0){
+                    /// Des produits ont été créés
+                    score_to_add += nb_creation * product.getRevenu();
+                }
+                else{
+                    /// Le produit n'a pas pu être créé
+                    product.setTimeleft(product.getTimeleft() - time_since_last_update);
+                }
+            }
+            else{
+                /// Le produit n'a pas de manager
+                if (product.getTimeleft() != 0 & product.getTimeleft()<=time_since_last_update){
+                    /// Un produit a été créé
+                    score_to_add += product.getRevenu();
+                }
+                else{
+                    /// On met à jour le temps écoulé
+                    product.setTimeleft(product.getTimeleft() - time_since_last_update);
+                }
+            }
+
+            world.setMoney(world.getMoney() + score_to_add);
+        }
+
+    }
+
+    long get_time_since_last_update(World world){
+        return world.getLastupdate() - System.currentTimeMillis();
+    }
+
+
 }
