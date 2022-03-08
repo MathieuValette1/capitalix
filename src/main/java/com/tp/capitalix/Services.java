@@ -91,10 +91,11 @@ public class Services {
             // achetée et mettre à jour la quantité de product
             Double player_money = world.getMoney();
             double product_price = newproduct.getCout();
-            Double qtPrice = qtchange * product_price;
+            Double qtPrice = this.getCostOfNProducts(product, qtchange);
             double new_player_money = player_money - qtPrice;
             world.setMoney(new_player_money);
 
+            product.setCout(product.getCout()*Math.pow(product.getCroissance(), qtchange));
             product.setQuantite(product.getQuantite()+newproduct.getQuantite());
 
         } else {
@@ -105,6 +106,11 @@ public class Services {
         // sauvegarder les changements du monde
         this.saveWorldToXml(world, username);
         return true;
+    }
+
+    double getCostOfNProducts(ProductType product, int qte){
+        double costProduct = product.getCout();
+        return (costProduct * (1-Math.pow(product.getCroissance(), qte))) / (1-product.getCroissance());
     }
 
     ProductType findProductById(World world, Integer id){

@@ -2,6 +2,9 @@ package com.tp.capitalix;
 
 
 
+import generated.PallierType;
+import generated.ProductType;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
@@ -28,7 +31,23 @@ public class Webservices {
     }
 
     @PUT
-    @Path("world/upgrade")
+    @Path("/product")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response updateProduct(String username, ProductType product){
+        services.updateProduct(username, product);
+        return Response.ok(services.getWorld(username)).build();
+    }
+
+    @PUT
+    @Path("/manager")
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    public Response updateProduct(String username, PallierType manager){
+        services.updateManager(username, manager);
+        return Response.ok(services.getWorld(username)).build();
+    }
+
+    @PUT
+    @Path("/upgrade")
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response updateUpgrade(@Context HttpServletRequest request){
         String username = request.getHeader("X-user");

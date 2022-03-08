@@ -12,7 +12,7 @@
         <product>
             <id>1</id>
             <name>Poisson pourri</name>
-            <logo>path_poisson</logo>
+            <logo>icones/poisson.png</logo>
             <cout>0</cout>
             <croissance>1.07</croissance>
             <revenu>1</revenu>
@@ -53,7 +53,7 @@
         <product>
             <id>2</id>
             <name>Harpes</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <cout>60</cout>
             <croissance>1.15</croissance>
             <revenu>60</revenu>
