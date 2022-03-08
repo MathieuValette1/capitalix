@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <world>
     <name>Capitalix</name>
-    <logo>path_logo</logo>
+    <logo>icones/asterix.png</logo>
     <money>1</money>
     <score>0</score>
     <totalangels>0</totalangels>

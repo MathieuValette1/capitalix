@@ -24,6 +24,7 @@ public class Services {
                 jaxbContext = JAXBContext.newInstance(World.class);
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
                 File f = new File(path+"/" + username +"-world.xml");
+
                 world = (World) jaxbUnmarshaller.unmarshal(f);
                 return world;
             } catch (Exception ex) {
@@ -32,6 +33,8 @@ public class Services {
                 // File f = new File(path+"/world.xml");
                 InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
                 world = (World) jaxbUnmarshaller.unmarshal(input);
+                assert input != null;
+                input.close();
                 return world;
             }
         }catch (Exception ex){
@@ -51,6 +54,7 @@ public class Services {
             File file = new File(path+"/"+username+"-world.xml");
             OutputStream output = new FileOutputStream(file);
             march.marshal(world, output);
+            output.close();
         } catch (Exception ex) {
             System.out.println("Erreur écriture du fichier:"+ex.getMessage());
             ex.printStackTrace();
