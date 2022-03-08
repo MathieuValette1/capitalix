@@ -30,21 +30,21 @@ public class Webservices {
         return Response.ok(services.getWorld(username)).build();
     }
 
-    @PUT
-    @Path("/product")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response updateProduct(String username, ProductType product){
-        services.updateProduct(username, product);
-        return Response.ok(services.getWorld(username)).build();
-    }
-
-    @PUT
-    @Path("/manager")
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-    public Response updateProduct(String username, PallierType manager){
-        services.updateManager(username, manager);
-        return Response.ok(services.getWorld(username)).build();
-    }
+//    @PUT
+//    @Path("/product")
+//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+//    public Response updateProduct(String username, ProductType product){
+//        services.updateProduct(username, product);
+//        return Response.ok(services.getWorld(username)).build();
+//    }
+//
+//    @PUT
+//    @Path("/manager")
+//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+//    public Response updateProduct(String username, PallierType manager){
+//        services.updateManager(username, manager);
+//        return Response.ok(services.getWorld(username)).build();
+//    }
 
     @PUT
     @Path("/upgrade")
