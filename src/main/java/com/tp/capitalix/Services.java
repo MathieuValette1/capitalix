@@ -175,7 +175,7 @@ public class Services {
 
     void update_player_score(World world){
 
-        long time_since_last_update = this.get_time_since_last_update(world);
+        long time_since_last_update = System.currentTimeMillis() - world.getLastupdate()  ;
         world.setLastupdate(System.currentTimeMillis());
         double score_to_add = 0;
 
@@ -207,14 +207,12 @@ public class Services {
                 }
             }
 
-            world.setMoney(world.getMoney() + score_to_add);
+            world.setScore(world.getScore() + score_to_add);
         }
 
     }
 
-    long get_time_since_last_update(World world){
-        return world.getLastupdate() - System.currentTimeMillis();
-    }
+
 
     public boolean updateUpgrade(String username, String pallierName){
         /// Achat d'un upgrade
