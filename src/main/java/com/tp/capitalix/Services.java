@@ -63,7 +63,6 @@ public class Services {
     }
 
     World getWorld(String username){
-        System.out.println("Je suis appelé");
         World world = this.readWorldFromXml(username);
         this.update_player_score(world);
         this.saveWorldToXml(world, username);
@@ -176,7 +175,7 @@ public class Services {
     }
 
     void update_player_score(World world){
-
+    /// A MODIFIER
         long time_since_last_update = System.currentTimeMillis() - world.getLastupdate()  ;
         world.setLastupdate(System.currentTimeMillis());
         double score_to_add = 0;

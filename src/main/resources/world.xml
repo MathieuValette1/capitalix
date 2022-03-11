@@ -2,7 +2,7 @@
 <world>
     <name>Capitalix</name>
     <logo>icones/asterix.png</logo>
-    <money>1000</money>
+    <money>0</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
@@ -13,7 +13,7 @@
             <id>1</id>
             <name>Poisson pourri</name>
             <logo>icones/poisson.png</logo>
-            <cout>0</cout>
+            <cout>1</cout>
             <croissance>1.07</croissance>
             <revenu>1</revenu>
             <vitesse>500</vitesse>
