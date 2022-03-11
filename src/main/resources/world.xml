@@ -13,7 +13,7 @@
             <id>1</id>
             <name>Poisson pourri</name>
             <logo>icones/poisson.png</logo>
-            <cout>0</cout>
+            <cout>1</cout>
             <croissance>1.07</croissance>
             <revenu>1</revenu>
             <vitesse>500</vitesse>
