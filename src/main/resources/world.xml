@@ -2,7 +2,7 @@
 <world>
     <name>Capitalix</name>
     <logo>icones/asterix.png</logo>
-    <money>1000</money>
+    <money>0</money>
     <score>0</score>
     <totalangels>0</totalangels>
     <activeangels>0</activeangels>
