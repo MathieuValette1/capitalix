@@ -16,7 +16,7 @@
             <cout>0</cout>
             <croissance>1.07</croissance>
             <revenu>1</revenu>
-            <vitesse>10000</vitesse>
+            <vitesse>500</vitesse>
             <quantite>1</quantite>
             <timeleft>500</timeleft>
             <managerUnlocked>false</managerUnlocked>
@@ -217,7 +217,7 @@
         <product>
             <id>6</id>
             <name>Chaudron de potion magique</name>
-            <logo>icones/poisson.png</logo>
+            <logo>icones/chaudron.png</logo>
             <cout>1244160</cout>
             <croissance>1.07</croissance>
             <revenu>622080</revenu>
@@ -436,7 +436,7 @@
     <managers>
         <pallier>
             <name>Ordralfabétix</name>
-            <logo>src/main/webapp/icones/ordralphabetix.gif</logo>
+            <logo>icones/ordralphabetix.png</logo>
             <seuil>500</seuil>
             <idcible>1</idcible>
             <ratio>1</ratio>
@@ -445,7 +445,7 @@
         </pallier>
         <pallier>
             <name>Assurancetourix</name>
-            <logo>str1234</logo>
+            <logo>icones/assurancetourix.png</logo>
             <seuil>1500</seuil>
             <idcible>2</idcible>
             <ratio>1</ratio>
