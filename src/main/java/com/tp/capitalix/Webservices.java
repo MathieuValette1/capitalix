@@ -35,7 +35,7 @@ public class Webservices {
     @PutMapping(value = "/product", consumes ={"application/xml","application/json"})
     public ProductType putProduct(@RequestHeader(value = "X-User", required = false) String username,
                                   @RequestBody ProductType product) {
-        System.out.println("PUT product");
+//        System.out.println("PUT product");
         Boolean isProductUpdated = services.updateProduct(username,product);
         if (isProductUpdated){
             return product;

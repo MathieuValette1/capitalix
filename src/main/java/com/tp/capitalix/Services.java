@@ -76,7 +76,7 @@ public class Services {
 // achat d’une certaine quantité de produit)
 // renvoie false si l’action n’a pas pu être traitée
     public Boolean updateProduct(String username, ProductType newproduct) {
-        System.out.println("Le joueur achète des produits");
+        System.out.println("Le joueur achète des " + newproduct.getName());
         // aller chercher le monde qui correspond au joueur
         World world = this.getWorld(username);
         // trouver dans ce monde, le produit équivalent à celui passé
