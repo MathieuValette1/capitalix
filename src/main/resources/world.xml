@@ -134,7 +134,7 @@
         </product>
         <product>
             <id>4</id>
-            <name>Casque gaullois</name>
+            <name>Casque Gaulois</name>
             <logo>icones/casque.png</logo>
             <cout>8640</cout>
             <croissance>1.07</croissance>
@@ -258,8 +258,8 @@
     </products>
     <allunlocks>
         <pallier>
-            <name>Arrête pas!</name>
-            <logo>icones/poisson.png</logo>
+            <name>All Unlock 1</name>
+            <logo>icones/cerpe.png</logo>
             <seuil>25</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -267,48 +267,12 @@
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>M'en fish!</name>
-            <logo>icones/poisson.png</logo>
+            <name>All Unlock 2</name>
+            <logo>icones/filet.png</logo>
             <seuil>50</seuil>
-            <idcible>1</idcible>
+            <idcible>0</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Requin</name>
-            <logo>icones/poisson.png</logo>
-            <seuil>100</seuil>
-            <idcible>1</idcible>
-            <ratio>2</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Change de dix!</name>
-            <logo>icones/harpe.png</logo>
-            <seuil>25</seuil>
-            <idcible>2</idcible>
-            <ratio>2</ratio>
-            <typeratio>gain</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Mise au diapason!</name>
-            <logo>icones/harpe.png</logo>
-            <seuil>50</seuil>
-            <idcible>2</idcible>
-            <ratio>2</ratio>
-            <typeratio>vitesse</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Aucun bémol!</name>
-            <logo>icones/harpe.png</logo>
-            <seuil>100</seuil>
-            <idcible>2</idcible>
-            <ratio>2</ratio>
-            <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
     </allunlocks>
@@ -317,7 +281,7 @@
             <name>Hameçonnix</name>
             <logo>icones/poisson.png</logo>
             <seuil>100</seuil>
-            <idcible>1</idcible>
+            <idcible>0</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
