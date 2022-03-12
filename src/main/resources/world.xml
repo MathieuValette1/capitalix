@@ -452,5 +452,41 @@
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
+        <pallier>
+            <name>Idéfix</name>
+            <logo>icones/idefix.png</logo>
+            <seuil>1500</seuil>
+            <idcible>3</idcible>
+            <ratio>1</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Cétautomatix</name>
+            <logo>icones/cetautomatix.png</logo>
+            <seuil>1500</seuil>
+            <idcible>4</idcible>
+            <ratio>1</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Obélix</name>
+            <logo>icones/obelix.png</logo>
+            <seuil>1500</seuil>
+            <idcible>5</idcible>
+            <ratio>1</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Panoramix</name>
+            <logo>icones/panoramix.png</logo>
+            <seuil>1500</seuil>
+            <idcible>6</idcible>
+            <ratio>1</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
     </managers>
 </world>
