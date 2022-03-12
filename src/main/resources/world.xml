@@ -23,7 +23,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/poisson.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -32,7 +32,7 @@
                 </pallier>
                 <pallier>
                     <name>M'en fish!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/poisson.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -41,7 +41,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/poisson.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -64,7 +64,7 @@
             <palliers>
                 <pallier>
                     <name>Change de dix!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/harpe.png</logo>
                     <seuil>25</seuil>
                     <idcible>2</idcible>
                     <ratio>2</ratio>
@@ -73,7 +73,7 @@
                 </pallier>
                 <pallier>
                     <name>Mise au diapason!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/harpe.png</logo>
                     <seuil>50</seuil>
                     <idcible>2</idcible>
                     <ratio>2</ratio>
@@ -82,7 +82,7 @@
                 </pallier>
                 <pallier>
                     <name>Aucun bémol!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/harpe.png</logo>
                     <seuil>100</seuil>
                     <idcible>2</idcible>
                     <ratio>2</ratio>
@@ -259,7 +259,7 @@
     <allunlocks>
         <pallier>
             <name>Arrête pas!</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>25</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -268,7 +268,7 @@
         </pallier>
         <pallier>
             <name>M'en fish!</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>50</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -277,7 +277,7 @@
         </pallier>
         <pallier>
             <name>Requin</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>100</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -286,7 +286,7 @@
         </pallier>
         <pallier>
             <name>Change de dix!</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>25</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -295,7 +295,7 @@
         </pallier>
         <pallier>
             <name>Mise au diapason!</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>50</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -304,7 +304,7 @@
         </pallier>
         <pallier>
             <name>Aucun bémol!</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>100</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
