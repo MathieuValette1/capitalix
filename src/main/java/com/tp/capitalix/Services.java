@@ -63,6 +63,7 @@ public class Services {
     }
 
     World getWorld(String username){
+        System.out.println("GET WORLD");
         World world = this.readWorldFromXml(username);
         this.update_player_score(world);
         this.saveWorldToXml(world, username);
@@ -75,7 +76,7 @@ public class Services {
 // achat d’une certaine quantité de produit)
 // renvoie false si l’action n’a pas pu être traitée
     public Boolean updateProduct(String username, ProductType newproduct) {
-        System.out.println("Le joueur achète des " + newproduct.getName());
+        System.out.println("[updateProduct] Le joueur met à jour des " + newproduct.getName());
         // aller chercher le monde qui correspond au joueur
         World world = this.getWorld(username);
         // trouver dans ce monde, le produit équivalent à celui passé
@@ -96,12 +97,20 @@ public class Services {
             double new_player_money = player_money - qtPrice;
             world.setMoney(new_player_money);
 
+            ///Calculer le nouveau coût du produit
             product.setCout(product.getCout()*Math.pow(product.getCroissance(), qtchange));
-            product.setQuantite(product.getQuantite()+newproduct.getQuantite());
+            System.out.println("[updateProduct] Nouveau cout de " + product.getName() + ": " + product.getCout());
+            /// Calculer la nouvelle quantité
+            product.setQuantite(newproduct.getQuantite());
+            System.out.println("[updateProduct] Nouvelle quantite de " + product.getName() + ": " + product.getQuantite());
+            /// Calculer le nouveau revenu
+            product.setRevenu(newproduct.getRevenu());
+            System.out.println("[updateProduct] Nouveau revenu de " + product.getName() + ": " + product.getRevenu());
 
         } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production
+            System.out.println("[updateProduct] lancement de production de " + product.getName());
             product.setTimeleft(product.getVitesse());
         }
         // sauvegarder les changements du monde
@@ -111,7 +120,9 @@ public class Services {
 
     double getCostOfNProducts(ProductType product, int qte){
         double costProduct = product.getCout();
-        return (costProduct * (1-Math.pow(product.getCroissance(), qte))) / (1-product.getCroissance());
+        double cost = (costProduct * (1-Math.pow(product.getCroissance(), qte))) / (1-product.getCroissance());
+        System.out.println("L'achat a couté " + cost);
+        return cost;
     }
 
     ProductType findProductById(World world, Integer id){
@@ -176,6 +187,7 @@ public class Services {
 
     void update_player_score(World world){
     /// A MODIFIER
+        System.out.println("UPDATE SCORE");
         long time_since_last_update = System.currentTimeMillis() - world.getLastupdate()  ;
         world.setLastupdate(System.currentTimeMillis());
         double score_to_add = 0;
@@ -185,11 +197,14 @@ public class Services {
 
         for (ProductType product: list_of_product){
             if (product.isManagerUnlocked()){
+                System.out.println("[update_player_score] "+ product.getName() + " a un manager");
                 /// Le produit a un manager
                 long nb_creation = time_since_last_update /  product.getVitesse();
                 if (nb_creation > 0){
                     /// Des produits ont été créés
+                    System.out.println("[update_player_score] "+ nb_creation +" " + product.getName() + " on été créés");
                     score_to_add += nb_creation * product.getRevenu();
+                    System.out.println("Cela a généré " + score_to_add + " revenus");
                 }
                 else{
                     /// Le produit n'a pas pu être créé
@@ -198,19 +213,28 @@ public class Services {
             }
             else{
                 /// Le produit n'a pas de manager
-                if (product.getTimeleft() != 0 & product.getTimeleft()<=time_since_last_update){
+                System.out.println("[update_player_score] "+ product.getName() + " n'a pas de manager");
+
+                if ((product.getTimeleft() != 0) && (product.getTimeleft()<=time_since_last_update)){
                     /// Un produit a été créé
+                    System.out.println("[update_player_score] "+ product.getName() + " a été créé");
+                    System.out.println("Cela a rapporté: " + product.getRevenu());
                     score_to_add += product.getRevenu();
+                    product.setTimeleft(0);
                 }
                 else{
                     /// On met à jour le temps écoulé
-                    product.setTimeleft(product.getTimeleft() - time_since_last_update);
+                    System.out.println("[update_player_score] "+ product.getName() + " n'a pas été créé");
+                    if (product.getTimeleft() > 0){
+                        System.out.println("[update_player_score] "+ product.getName() + " est en production ");
+                        /// Le produit est en production, on met à jour son timeleft
+                        product.setTimeleft(product.getTimeleft() - time_since_last_update);
+                    }
                 }
             }
 
-            world.setScore(world.getScore() + score_to_add);
         }
-
+        world.setScore(world.getScore() + score_to_add);
     }
 
 

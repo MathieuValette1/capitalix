@@ -18,7 +18,7 @@
             <revenu>1</revenu>
             <vitesse>500</vitesse>
             <quantite>1</quantite>
-            <timeleft>500</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -59,7 +59,7 @@
             <revenu>60</revenu>
             <vitesse>3000</vitesse>
             <quantite>0</quantite>
-            <timeleft>3000</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -100,7 +100,7 @@
             <revenu>540</revenu>
             <vitesse>6000</vitesse>
             <quantite>0</quantite>
-            <timeleft>6000</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -141,7 +141,7 @@
             <revenu>4320</revenu>
             <vitesse>12000</vitesse>
             <quantite>0</quantite>
-            <timeleft>12000</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -182,7 +182,7 @@
             <revenu>51840</revenu>
             <vitesse>24000</vitesse>
             <quantite>0</quantite>
-            <timeleft>24000</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
@@ -223,7 +223,7 @@
             <revenu>622080</revenu>
             <vitesse>96000</vitesse>
             <quantite>0</quantite>
-            <timeleft>96000</timeleft>
+            <timeleft>0</timeleft>
             <managerUnlocked>false</managerUnlocked>
             <palliers>
                 <pallier>
