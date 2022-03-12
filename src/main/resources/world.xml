@@ -134,8 +134,8 @@
         </product>
         <product>
             <id>4</id>
-            <name>Enclume</name>
-            <logo>icones/enclume.png</logo>
+            <name>Casque gaullois</name>
+            <logo>icones/casque.png</logo>
             <cout>8640</cout>
             <croissance>1.07</croissance>
             <revenu>4320</revenu>
@@ -216,8 +216,8 @@
         </product>
         <product>
             <id>6</id>
-            <name>Chaudron de potion magique</name>
-            <logo>icones/chaudron.png</logo>
+            <name>Potion magique</name>
+            <logo>icones/potion.png</logo>
             <cout>1244160</cout>
             <croissance>1.07</croissance>
             <revenu>622080</revenu>
