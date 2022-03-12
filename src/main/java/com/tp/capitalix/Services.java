@@ -95,17 +95,34 @@ public class Services {
             // soustraire de l'argent du joueur le cout de la quantité
             // achetée et mettre à jour la quantité de product
             Double player_money = world.getMoney();
+            System.out.println("ARGENT1: " + world.getMoney());
             Double qtPrice = this.getCostOfNProducts(product, qtchange);
             double new_player_money = player_money - qtPrice;
             world.setMoney(new_player_money);
+            System.out.println("ARGENT2: " + world.getMoney());
 
             ///Calculer le nouveau coût du produit
-            System.out.println(newproduct.getCout());
             product.setCout(newproduct.getCout());
             System.out.println("[updateProduct] Nouveau cout de " + product.getName() + ": " + product.getCout());
             /// Calculer la nouvelle quantité
             product.setQuantite(newproduct.getQuantite());
             System.out.println("[updateProduct] Nouvelle quantite de " + product.getName() + ": " + product.getQuantite());
+
+            PalliersType palliersType = product.getPalliers();
+            List<PallierType> liste_palliers = palliersType.getPallier();
+            for (PallierType pallier: liste_palliers){
+                if (product.getQuantite() >= pallier.getSeuil() && !pallier.isUnlocked()){
+                    /// On débloque le pallier
+                    pallier.setUnlocked(true);
+                    if (pallier.getTyperatio() == TyperatioType.VITESSE){
+                        product.setVitesse((int) (product.getVitesse() / pallier.getRatio()));
+                        product.setTimeleft((long) (product.getTimeleft() / pallier.getRatio()));
+                    }
+                    else if (pallier.getTyperatio() == TyperatioType.GAIN){
+                        product.setRevenu(product.getRevenu() * pallier.getRatio());
+                    }
+                }
+            }
 
         } else {
             // initialiser product.timeleft à product.vitesse
@@ -114,6 +131,7 @@ public class Services {
             product.setTimeleft(product.getVitesse());
         }
         // sauvegarder les changements du monde
+        world.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(world, username);
         return true;
     }
@@ -141,33 +159,43 @@ public class Services {
     // prend en paramètre le pseudo du joueur et le manager acheté.
     // renvoie false si l’action n’a pas pu être traitée
     public Boolean updateManager(String username, PallierType newmanager) {
+
+        System.out.println("[UPDATEMANAGER] ARGENT2: " + world.getMoney());
+        System.out.println("UPDATEMANAGER");
         // aller chercher le monde qui correspond au joueur
         World world = getWorld(username);
         // trouver dans ce monde, le manager équivalent à celui passé
         // en paramètre
         PallierType manager = findManagerByName(world, newmanager.getName());
         if (manager == null) {
+            System.out.println(" [UPDATEMANAGER] Manager null");
             return false;
         }
 
         // débloquer ce manager
         manager.setUnlocked(true);
+        System.out.println(" [UPDATEMANAGER]"+manager.getName() + " débloqué");
         // trouver le produit correspondant au manager
         ProductType product = findProductById(world, manager.getIdcible());
         if (product == null) {
+            System.out.println(" [UPDATEMANAGER] Produit null");
             return false;
         }
         // débloquer le manager de ce produit
         product.setManagerUnlocked(true);
+        System.out.println(" [UPDATEMANAGER] "+product.getName() + " automatisé");
 
         // soustraire de l'argent du joueur le cout du manager
         double player_money = world.getMoney();
         int manager_cost = manager.getSeuil();
         double new_player_money = player_money - manager_cost;
         world.setMoney(new_player_money);
+        System.out.println("[UPDATEMANAGER] ARGENT2: " + world.getMoney());
 
         // sauvegarder les changements au monde
+        world.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(world, username);
+
         return true;
     }
 
@@ -186,10 +214,8 @@ public class Services {
     }
 
     void update_player_score(World world){
-    /// A MODIFIER
         System.out.println("UPDATE SCORE");
         long time_since_last_update = System.currentTimeMillis() - world.getLastupdate()  ;
-        world.setLastupdate(System.currentTimeMillis());
         double score_to_add = 0;
 
         ProductsType productsType = world.getProducts();
@@ -234,6 +260,7 @@ public class Services {
             }
 
         }
+        world.setLastupdate(System.currentTimeMillis());
         world.setScore(world.getScore() + score_to_add);
         world.setMoney(world.getMoney() + score_to_add);
     }
