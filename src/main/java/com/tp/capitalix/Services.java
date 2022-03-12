@@ -108,6 +108,22 @@ public class Services {
             product.setQuantite(newproduct.getQuantite());
             System.out.println("[updateProduct] Nouvelle quantite de " + product.getName() + ": " + product.getQuantite());
 
+            PalliersType palliersType = product.getPalliers();
+            List<PallierType> liste_palliers = palliersType.getPallier();
+            for (PallierType pallier: liste_palliers){
+                if (product.getQuantite() >= pallier.getSeuil() && !pallier.isUnlocked()){
+                    /// On débloque le pallier
+                    pallier.setUnlocked(true);
+                    if (pallier.getTyperatio() == TyperatioType.VITESSE){
+                        product.setVitesse((int) (product.getVitesse() / pallier.getRatio()));
+                        product.setTimeleft((long) (product.getTimeleft() / pallier.getRatio()));
+                    }
+                    else if (pallier.getTyperatio() == TyperatioType.GAIN){
+                        product.setRevenu(product.getRevenu() * pallier.getRatio());
+                    }
+                }
+            }
+
         } else {
             // initialiser product.timeleft à product.vitesse
             // pour lancer la production

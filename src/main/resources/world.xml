@@ -315,7 +315,7 @@
     <upgrades>
         <pallier>
             <name>Hameçonnix</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>100</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -324,7 +324,7 @@
         </pallier>
         <pallier>
             <name>Accordix</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>200</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -333,7 +333,7 @@
         </pallier>
         <pallier>
             <name>Permis de pêche</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>300</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -342,7 +342,7 @@
         </pallier>
         <pallier>
             <name>HarpeV2</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>400</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -351,7 +351,7 @@
         </pallier>
         <pallier>
             <name>Canne à pêche</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>500</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -360,7 +360,7 @@
         </pallier>
         <pallier>
             <name>Partition</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>600</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -369,7 +369,7 @@
         </pallier>
         <pallier>
             <name>Nilon</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>700</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -378,7 +378,7 @@
         </pallier>
         <pallier>
             <name>Micro</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>800</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -387,7 +387,7 @@
         </pallier>
         <pallier>
             <name>Bateau</name>
-            <logo>str1234</logo>
+            <logo>icones/poisson.png</logo>
             <seuil>900</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
@@ -396,7 +396,7 @@
         </pallier>
         <pallier>
             <name>Scène</name>
-            <logo>str1234</logo>
+            <logo>icones/harpe.png</logo>
             <seuil>1000</seuil>
             <idcible>0</idcible>
             <ratio>2</ratio>
