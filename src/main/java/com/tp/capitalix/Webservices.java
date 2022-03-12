@@ -44,13 +44,19 @@ public class Webservices {
             return null;
         }
     }
-//    @PUT
-//    @Path("/manager")
-//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-//    public Response updateProduct(String username, PallierType manager){
-//        services.updateManager(username, manager);
-//        return Response.ok(services.getWorld(username)).build();
-//    }
+
+    @PutMapping(value = "/manager", consumes ={"application/xml","application/json"})
+    public PallierType putProduct(@RequestHeader(value = "X-User", required = false) String username,
+                                  @RequestBody PallierType manager) {
+        System.out.println("PUT MANAGER");
+        Boolean isManagerUpdated = services.updateManager(username,manager);
+        if (isManagerUpdated){
+            return manager;
+        }
+        else{
+            return null;
+        }
+    }
 
 //    @PUT
 //    @Path("/upgrade")
