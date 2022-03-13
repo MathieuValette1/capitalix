@@ -367,43 +367,6 @@
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
-<!--        achats en anges-->
-        <pallier>
-            <name>Métronome</name>
-            <logo>icones/metronome.png</logo>
-            <seuil>900</seuil>
-            <idcible>2</idcible>
-            <ratio>2</ratio>
-            <typeratio>ange</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Tenailles de forge</name>
-            <logo>icones/tenaille.png</logo>
-            <seuil>900</seuil>
-            <idcible>4</idcible>
-            <ratio>2</ratio>
-            <typeratio>ange</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Noeud cadeau</name>
-            <logo>icones/noeudrouge.png</logo>
-            <seuil>900</seuil>
-            <idcible>5</idcible>
-            <ratio>2</ratio>
-            <typeratio>ange</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
-        <pallier>
-            <name>Gourde individuelle</name>
-            <logo>icones/gourde.png</logo>
-            <seuil>900</seuil>
-            <idcible>6</idcible>
-            <ratio>2</ratio>
-            <typeratio>ange</typeratio>
-            <unlocked>false</unlocked>
-        </pallier>
 <!--        augmente l'efficacité des anges-->
         <pallier>
             <name>Angel Upgrade 1</name>
@@ -411,7 +374,7 @@
             <seuil>900</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
-            <typeratio>gain</typeratio>
+            <typeratio>ange</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
@@ -420,7 +383,7 @@
             <seuil>900</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
-            <typeratio>gain</typeratio>
+            <typeratio>ange</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
@@ -429,7 +392,7 @@
             <seuil>900</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
-            <typeratio>gain</typeratio>
+            <typeratio>ange</typeratio>
             <unlocked>false</unlocked>
         </pallier>
 <!--        upgrade tous les produits-->
@@ -453,9 +416,47 @@
         </pallier>
     </upgrades>
     <angelupgrades>
+<!--        achats en anges-->
+        <pallier>
+            <name>Métronome</name>
+            <logo>icones/metronome.png</logo>
+            <seuil>900</seuil>
+            <idcible>2</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Tenailles de forge</name>
+            <logo>icones/tenaille.png</logo>
+            <seuil>900</seuil>
+            <idcible>4</idcible>
+            <ratio>2</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Noeud cadeau</name>
+            <logo>icones/noeudrouge.png</logo>
+            <seuil>900</seuil>
+            <idcible>5</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Gourde individuelle</name>
+            <logo>icones/gourde.png</logo>
+            <seuil>900</seuil>
+            <idcible>6</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+
         <pallier>
             <name>Toutatis</name>
-            <logo>str1234</logo>
+            <logo>icones/sanglier.png</logo>
             <seuil>10 000</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
@@ -464,7 +465,7 @@
         </pallier>
         <pallier>
             <name>Belenos</name>
-            <logo>str1234</logo>
+            <logo>icones/sanglier.png</logo>
             <seuil>100 000</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
@@ -473,7 +474,7 @@
         </pallier>
         <pallier>
             <name>Jupiter</name>
-            <logo>str1234</logo>
+            <logo>icones/sanglier.png</logo>
             <seuil>1 000 000</seuil>
             <idcible>-1</idcible>
             <ratio>2</ratio>
