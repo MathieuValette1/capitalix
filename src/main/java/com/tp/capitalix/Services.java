@@ -289,22 +289,41 @@ public class Services {
         //////System.out.println(upgrade.getName() + " débloqué");
         // Le joueur a assez d'argent
 
-        ProductType product = findProductById(world, newUpgrade.getIdcible());
-
         PallierType upgrade = findUpgradeByName(world, newUpgrade.getName());
+
+        if (newUpgrade.getIdcible() == 0){
+            // L'upgrade s'applique à tous les produits
+            for (ProductType productType: world.getProducts().getProduct()){
+                if (upgrade.getTyperatio() == TyperatioType.VITESSE){
+                    productType.setVitesse((int) (productType.getVitesse() / upgrade.getRatio()));
+                    productType.setTimeleft((long) (productType.getTimeleft() / upgrade.getRatio()));
+                }
+                else if (upgrade.getTyperatio() == TyperatioType.GAIN){
+                    System.out.println("Revenu: " + productType.getRevenu());
+                    productType.setRevenu(productType.getRevenu() * upgrade.getRatio());
+                    System.out.println("Nouveau revenu: " + productType.getRevenu());
+
+                }
+            }
+        }
+        else{
+            ProductType product = findProductById(world, newUpgrade.getIdcible());
+            if (product == null){return false;}
+            if (upgrade.getTyperatio() == TyperatioType.VITESSE){
+                product.setVitesse((int) (product.getVitesse() / upgrade.getRatio()));
+                product.setTimeleft((long) (product.getTimeleft() / upgrade.getRatio()));
+            }
+            else if (upgrade.getTyperatio() == TyperatioType.GAIN){
+                System.out.println("Revenu: " + product.getRevenu());
+                product.setRevenu(product.getRevenu() * upgrade.getRatio());
+                System.out.println("Nouveau revenu: " + product.getRevenu());
+            }
+        }
+
         upgrade.setUnlocked(true);
         world.setMoney(world.getMoney()-upgrade.getSeuil());
 
-        if (upgrade.getTyperatio() == TyperatioType.VITESSE){
-            product.setVitesse((int) (product.getVitesse() / upgrade.getRatio()));
-            product.setTimeleft((long) (product.getTimeleft() / upgrade.getRatio()));
-        }
-        else if (upgrade.getTyperatio() == TyperatioType.GAIN){
-            System.out.println("Revenu: " + product.getRevenu());
-            product.setRevenu(product.getRevenu() * upgrade.getRatio());
-            System.out.println("Nouveau revenu: " + product.getRevenu());
 
-        }
         upgrade.setRatio(1);
         world.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(world, username);
