@@ -300,9 +300,12 @@ public class Services {
             product.setTimeleft((long) (product.getTimeleft() / upgrade.getRatio()));
         }
         else if (upgrade.getTyperatio() == TyperatioType.GAIN){
+            System.out.println("Revenu: " + product.getRevenu());
             product.setRevenu(product.getRevenu() * upgrade.getRatio());
-        }
+            System.out.println("Nouveau revenu: " + product.getRevenu());
 
+        }
+        upgrade.setRatio(1);
         world.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(world, username);
         System.out.println("State " + upgrade.isUnlocked());
