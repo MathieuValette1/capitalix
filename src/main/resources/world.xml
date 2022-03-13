@@ -137,7 +137,7 @@
             <name>Casque Gaulois</name>
             <logo>icones/casque.png</logo>
             <cout>8640</cout>
-            <croissance>1.07</croissance>
+            <croissance>1.13</croissance>
             <revenu>4320</revenu>
             <vitesse>12000</vitesse>
             <quantite>0</quantite>
@@ -178,7 +178,7 @@
             <name>Menhir</name>
             <logo>icones/menhir.png</logo>
             <cout>103680</cout>
-            <croissance>1.07</croissance>
+            <croissance>1.12</croissance>
             <revenu>51840</revenu>
             <vitesse>24000</vitesse>
             <quantite>0</quantite>
@@ -219,7 +219,7 @@
             <name>Potion magique</name>
             <logo>icones/potion.png</logo>
             <cout>1244160</cout>
-            <croissance>1.07</croissance>
+            <croissance>1.11</croissance>
             <revenu>622080</revenu>
             <vitesse>96000</vitesse>
             <quantite>0</quantite>
@@ -280,7 +280,7 @@
         <pallier>
             <name>Canne à pêche</name>
             <logo>icones/cannepeche.png</logo>
-            <seuil>100</seuil>
+            <seuil>1000</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -289,7 +289,7 @@
         <pallier>
             <name>Accordix</name>
             <logo>icones/accordeur.png</logo>
-            <seuil>400</seuil>
+            <seuil>3000</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -298,7 +298,7 @@
         <pallier>
             <name>Croquettes</name>
             <logo>icones/os.png</logo>
-            <seuil>1000</seuil>
+            <seuil>7000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -307,7 +307,7 @@
         <pallier>
             <name>Marteau de forge</name>
             <logo>icones/marteau.png</logo>
-            <seuil>6000</seuil>
+            <seuil>50000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -316,7 +316,7 @@
         <pallier>
             <name>Marteau et Burin</name>
             <logo>icones/burin.png</logo>
-            <seuil>7500</seuil>
+            <seuil>100000</seuil>
             <idcible>5</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -325,7 +325,7 @@
         <pallier>
             <name>Cerpe de druide</name>
             <logo>icones/cerpe.png</logo>
-            <seuil>10000</seuil>
+            <seuil>500000</seuil>
             <idcible>6</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -334,7 +334,7 @@
         <pallier>
             <name>Filet de pêche</name>
             <logo>icones/filet.png</logo>
-            <seuil>25000</seuil>
+            <seuil>1000000</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -343,7 +343,7 @@
         <pallier>
             <name>Partition</name>
             <logo>icones/partition.png</logo>
-            <seuil>50000</seuil>
+            <seuil>50000000</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -353,7 +353,7 @@
         <pallier>
             <name>Gland</name>
             <logo>icones/os.png</logo>
-            <seuil>100000</seuil>
+            <seuil>10000000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -362,7 +362,7 @@
         <pallier>
             <name>Enclume</name>
             <logo>icones/enclume.png</logo>
-            <seuil>200000</seuil>
+            <seuil>50000000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -372,7 +372,7 @@
         <pallier>
             <name>Marteau piqueur</name>
             <logo>icones/marteaupiqueur.png</logo>
-            <seuil>500000</seuil>
+            <seuil>100000000</seuil>
             <idcible>5</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -381,7 +381,7 @@
         <pallier>
             <name>Chaudron en cuivre</name>
             <logo>icones/chaudron.png</logo>
-            <seuil>1000000</seuil>
+            <seuil>1 000 000 000 000</seuil>
             <idcible>6</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -506,7 +506,7 @@
         <pallier>
             <name>Ordralfabétix</name>
             <logo>icones/ordralphabetix.png</logo>
-            <seuil>500</seuil>
+            <seuil>1000</seuil>
             <idcible>1</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -515,7 +515,7 @@
         <pallier>
             <name>Assurancetourix</name>
             <logo>icones/assurancetourix.png</logo>
-            <seuil>1500</seuil>
+            <seuil>15000</seuil>
             <idcible>2</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -524,7 +524,7 @@
         <pallier>
             <name>Idéfix</name>
             <logo>icones/idefix.png</logo>
-            <seuil>3000</seuil>
+            <seuil>100000</seuil>
             <idcible>3</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -533,7 +533,7 @@
         <pallier>
             <name>Cétautomatix</name>
             <logo>icones/cetautomatix.png</logo>
-            <seuil>5000</seuil>
+            <seuil>500000</seuil>
             <idcible>4</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -542,7 +542,7 @@
         <pallier>
             <name>Obélix</name>
             <logo>icones/obelix.png</logo>
-            <seuil>10000</seuil>
+            <seuil>1200000</seuil>
             <idcible>5</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -551,7 +551,7 @@
         <pallier>
             <name>Panoramix</name>
             <logo>icones/panoramix.png</logo>
-            <seuil>50000</seuil>
+            <seuil>10000000</seuil>
             <idcible>6</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
