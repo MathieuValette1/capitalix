@@ -265,22 +265,36 @@ public class Services {
         world.setMoney(world.getMoney() + score_to_add);
     }
 
+    PallierType findUpgradeByName(World world, String upgradeName){
+        PalliersType palliersType = world.getUpgrades();
+        List<PallierType> listOfUpgrades = palliersType.getPallier();
+        PallierType upgrade_to_return;
 
+        for(PallierType upgrade: listOfUpgrades){
+            if (Objects.equals(upgrade.getName(), upgradeName)){
+                upgrade_to_return = upgrade;
+                return upgrade_to_return;
+            }
+        }
+        return null;
+    }
 
-    public boolean updateUpgrade(String username, PallierType upgrade){
+    public boolean updateUpgrade(String username, PallierType newUpgrade){
         System.out.println("UPDATEUPGRADE");
-        System.out.println(upgrade.isUnlocked());
+        System.out.println(newUpgrade.isUnlocked());
         /// Achat d'un upgrade
         /// Il débloque l'upgrade si le joueur a assez d'argent
         /// Il faut déduire le prix de l'upgrade au score du joueur
         World world = getWorld(username);
-        System.out.println(upgrade.getName() + " débloqué");
+        //////System.out.println(upgrade.getName() + " débloqué");
         // Le joueur a assez d'argent
+
+        ProductType product = findProductById(world, newUpgrade.getIdcible());
+
+        PallierType upgrade = findUpgradeByName(world, newUpgrade.getName());
         upgrade.setUnlocked(true);
         world.setMoney(world.getMoney()-upgrade.getSeuil());
 
-
-        ProductType product = findProductById(world, upgrade.getIdcible());
         if (upgrade.getTyperatio() == TyperatioType.VITESSE){
             product.setVitesse((int) (product.getVitesse() / upgrade.getRatio()));
             product.setTimeleft((long) (product.getTimeleft() / upgrade.getRatio()));
@@ -291,7 +305,7 @@ public class Services {
 
         world.setLastupdate(System.currentTimeMillis());
         this.saveWorldToXml(world, username);
-        System.out.println(upgrade.isUnlocked());
+        System.out.println("State " + upgrade.isUnlocked());
         return true;
 
     }
