@@ -105,7 +105,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/os.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -114,7 +114,7 @@
                 </pallier>
                 <pallier>
                     <name>M'en fish!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/os.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -123,7 +123,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/os.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -146,7 +146,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/casque.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -155,7 +155,7 @@
                 </pallier>
                 <pallier>
                     <name>M'en fish!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/casque.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -164,7 +164,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/casque.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -187,7 +187,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/menhir.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -196,7 +196,7 @@
                 </pallier>
                 <pallier>
                     <name>M'en fish!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/menhir.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -205,7 +205,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/menhir.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -228,7 +228,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/potion.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -237,7 +237,7 @@
                 </pallier>
                 <pallier>
                     <name>M'en fish!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/potion.png</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -246,7 +246,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/potion.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -259,16 +259,16 @@
     <allunlocks>
         <pallier>
             <name>All Unlock 1</name>
-            <logo>icones/cerpe.png</logo>
+            <logo>icones/argent.png</logo>
             <seuil>25</seuil>
-            <idcible>1</idcible>
+            <idcible>0</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
             <name>All Unlock 2</name>
-            <logo>icones/filet.png</logo>
+            <logo>icones/argent.png</logo>
             <seuil>50</seuil>
             <idcible>0</idcible>
             <ratio>2</ratio>
@@ -278,17 +278,17 @@
     </allunlocks>
     <upgrades>
         <pallier>
-            <name>Hameçonnix</name>
-            <logo>icones/poisson.png</logo>
+            <name>Canne à pêche</name>
+            <logo>icones/cannepeche.png</logo>
             <seuil>100</seuil>
-            <idcible>0</idcible>
+            <idcible>1</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
             <name>Accordix</name>
-            <logo>icones/harpe.png</logo>
+            <logo>icones/accordeur.png</logo>
             <seuil>200</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -296,8 +296,8 @@
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Permis de pêche</name>
-            <logo>icones/poisson.png</logo>
+            <name>Filet de pêche</name>
+            <logo>icones/filet.png</logo>
             <seuil>300</seuil>
             <idcible>1</idcible>
             <ratio>2</ratio>
@@ -305,8 +305,8 @@
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>HarpeV2</name>
-            <logo>icones/harpe.png</logo>
+            <name>Partition</name>
+            <logo>icones/partition.png</logo>
             <seuil>400</seuil>
             <idcible>2</idcible>
             <ratio>2</ratio>
@@ -314,57 +314,141 @@
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Canne à pêche</name>
-            <logo>icones/poisson.png</logo>
+            <name>Marteau de forge</name>
+            <logo>icones/marteau.png</logo>
             <seuil>500</seuil>
-            <idcible>1</idcible>
+            <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Partition</name>
-            <logo>icones/harpe.png</logo>
+            <name>Marteau et Burin</name>
+            <logo>icones/burin.png</logo>
             <seuil>600</seuil>
-            <idcible>2</idcible>
+            <idcible>5</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Nilon</name>
-            <logo>icones/poisson.png</logo>
+            <name>Enclume</name>
+            <logo>icones/enclume.png</logo>
             <seuil>700</seuil>
-            <idcible>1</idcible>
+            <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Micro</name>
-            <logo>icones/harpe.png</logo>
+            <name>Marteau piqueur</name>
+            <logo>icones/marteaupiqueur.png</logo>
             <seuil>800</seuil>
-            <idcible>1</idcible>
+            <idcible>5</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Bateau</name>
-            <logo>icones/poisson.png</logo>
+            <name>Cerpe de druide</name>
+            <logo>icones/cerpe.png</logo>
+            <seuil>1000</seuil>
+            <idcible>6</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Chaudron en cuivre</name>
+            <logo>icones/chaudron.png</logo>
+            <seuil>1000</seuil>
+            <idcible>6</idcible>
+            <ratio>2</ratio>
+            <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+<!--        achats en anges-->
+        <pallier>
+            <name>Métronome</name>
+            <logo>icones/metronome.png</logo>
             <seuil>900</seuil>
-            <idcible>-1</idcible>
+            <idcible>2</idcible>
             <ratio>2</ratio>
             <typeratio>ange</typeratio>
             <unlocked>false</unlocked>
         </pallier>
         <pallier>
-            <name>Scène</name>
-            <logo>icones/harpe.png</logo>
+            <name>Tenailles de forge</name>
+            <logo>icones/tenaille.png</logo>
+            <seuil>900</seuil>
+            <idcible>4</idcible>
+            <ratio>2</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Noeud cadeau</name>
+            <logo>icones/noeudrouge.png</logo>
+            <seuil>900</seuil>
+            <idcible>5</idcible>
+            <ratio>2</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Gourde individuelle</name>
+            <logo>icones/gourde.png</logo>
+            <seuil>900</seuil>
+            <idcible>6</idcible>
+            <ratio>2</ratio>
+            <typeratio>ange</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+<!--        augmente l'efficacité des anges-->
+        <pallier>
+            <name>Angel Upgrade 1</name>
+            <logo>icones/sanglier.png</logo>
+            <seuil>900</seuil>
+            <idcible>-1</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Angel Upgrade 2</name>
+            <logo>icones/sanglier.png</logo>
+            <seuil>900</seuil>
+            <idcible>-1</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Angel Upgrade 3</name>
+            <logo>icones/sanglier.png</logo>
+            <seuil>900</seuil>
+            <idcible>-1</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+<!--        upgrade tous les produits-->
+        <pallier>
+            <name>All Upgrade 1</name>
+            <logo>icones/argent.png</logo>
             <seuil>1000</seuil>
             <idcible>0</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>All Upgrade 2</name>
+            <logo>icones/argent.png</logo>
+            <seuil>1000</seuil>
+            <idcible>0</idcible>
+            <ratio>2</ratio>
+            <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
     </upgrades>
