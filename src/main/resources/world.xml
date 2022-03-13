@@ -146,7 +146,7 @@
             <palliers>
                 <pallier>
                     <name>Arrête pas!</name>
-                    <logo>str1234</logo>
+                    <logo>icones/poisson.png</logo>
                     <seuil>25</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -154,7 +154,7 @@
                     <unlocked>false</unlocked>
                 </pallier>
                 <pallier>
-                    <name>M'en fish!</name>
+                    <name>icones/poisson.png</name>
                     <logo>str1234</logo>
                     <seuil>50</seuil>
                     <idcible>1</idcible>
@@ -164,7 +164,7 @@
                 </pallier>
                 <pallier>
                     <name>Requin</name>
-                    <logo>str1234</logo>
+                    <logo>icones/poisson.png</logo>
                     <seuil>100</seuil>
                     <idcible>1</idcible>
                     <ratio>2</ratio>
@@ -281,7 +281,7 @@
             <name>Hameçonnix</name>
             <logo>icones/poisson.png</logo>
             <seuil>100</seuil>
-            <idcible>0</idcible>
+            <idcible>1</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -419,7 +419,7 @@
         <pallier>
             <name>Idéfix</name>
             <logo>icones/idefix.png</logo>
-            <seuil>1500</seuil>
+            <seuil>5000</seuil>
             <idcible>3</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -428,7 +428,7 @@
         <pallier>
             <name>Cétautomatix</name>
             <logo>icones/cetautomatix.png</logo>
-            <seuil>1500</seuil>
+            <seuil>10000</seuil>
             <idcible>4</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -437,7 +437,7 @@
         <pallier>
             <name>Obélix</name>
             <logo>icones/obelix.png</logo>
-            <seuil>1500</seuil>
+            <seuil>50000</seuil>
             <idcible>5</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>
@@ -446,7 +446,7 @@
         <pallier>
             <name>Panoramix</name>
             <logo>icones/panoramix.png</logo>
-            <seuil>1500</seuil>
+            <seuil>100000</seuil>
             <idcible>6</idcible>
             <ratio>1</ratio>
             <typeratio>vitesse</typeratio>

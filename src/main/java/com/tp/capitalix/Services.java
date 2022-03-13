@@ -267,34 +267,32 @@ public class Services {
 
 
 
-    public boolean updateUpgrade(String username, String pallierName){
+    public boolean updateUpgrade(String username, PallierType upgrade){
+        System.out.println("UPDATEUPGRADE");
+        System.out.println(upgrade.isUnlocked());
         /// Achat d'un upgrade
         /// Il débloque l'upgrade si le joueur a assez d'argent
         /// Il faut déduire le prix de l'upgrade au score du joueur
         World world = getWorld(username);
-        PallierType upgrade = this.findUpgradeByName(pallierName);
-        if (world.getMoney() >= upgrade.getSeuil()){
-            // Le joueur a assez d'argent
-            upgrade.setUnlocked(true);
-            world.setMoney(world.getMoney()-upgrade.getSeuil());
-            return true;
+        System.out.println(upgrade.getName() + " débloqué");
+        // Le joueur a assez d'argent
+        upgrade.setUnlocked(true);
+        world.setMoney(world.getMoney()-upgrade.getSeuil());
+
+
+        ProductType product = findProductById(world, upgrade.getIdcible());
+        if (upgrade.getTyperatio() == TyperatioType.VITESSE){
+            product.setVitesse((int) (product.getVitesse() / upgrade.getRatio()));
+            product.setTimeleft((long) (product.getTimeleft() / upgrade.getRatio()));
         }
-        return false;
-    }
-
-    PallierType findUpgradeByName(String upgradeName){
-        PalliersType palliersType = world.getUpgrades();
-        List<PallierType> listOfUpgrade = palliersType.getPallier();
-        PallierType upgrade_to_return;
-
-        for(PallierType manager: listOfUpgrade){
-            if (Objects.equals(manager.getName(), upgradeName)){
-                upgrade_to_return = manager;
-                return upgrade_to_return;
-            }
+        else if (upgrade.getTyperatio() == TyperatioType.GAIN){
+            product.setRevenu(product.getRevenu() * upgrade.getRatio());
         }
-        return null;
+
+        world.setLastupdate(System.currentTimeMillis());
+        this.saveWorldToXml(world, username);
+        System.out.println(upgrade.isUnlocked());
+        return true;
+
     }
-
-
 }

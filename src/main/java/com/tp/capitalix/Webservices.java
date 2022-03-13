@@ -46,7 +46,7 @@ public class Webservices {
     }
 
     @PutMapping(value = "/manager", consumes ={"application/xml","application/json"})
-    public PallierType putProduct(@RequestHeader(value = "X-User", required = false) String username,
+    public PallierType putManager(@RequestHeader(value = "X-User", required = false) String username,
                                   @RequestBody PallierType manager) {
         System.out.println("PUT MANAGER");
         Boolean isManagerUpdated = services.updateManager(username,manager);
@@ -58,16 +58,20 @@ public class Webservices {
         }
     }
 
-//    @PUT
-//    @Path("/upgrade")
-//    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-//    public Response updateUpgrade(@Context HttpServletRequest request){
-//        String username = request.getHeader("X-user");
-//        String pallierName = request.getHeader("X-pallierName");
-//        services.updateUpgrade(username, pallierName);
-//
-//        return Response.ok(services.getWorld(username)).build();
-//    }
+    @PutMapping(value = "/upgrade", consumes ={"application/xml","application/json"})
+    public PallierType putUpgrade(@RequestHeader(value = "X-User", required = false) String username,
+                                  @RequestBody PallierType upgrade) {
+        System.out.println("PUT UPGRADE");
+        Boolean isUpgradeUpdated = services.updateUpgrade(username,upgrade);
+        if (isUpgradeUpdated){
+            return upgrade;
+        }
+        else{
+            return null;
+        }
+    }
+
+
 
 
 }
