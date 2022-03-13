@@ -5,6 +5,7 @@ package com.tp.capitalix;
 import generated.PallierType;
 import generated.ProductType;
 import generated.World;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -29,6 +30,15 @@ public class Webservices {
             required = false) String username) {
         World world = services.getWorld(username);
         return ResponseEntity.ok(world);
+    }
+
+    @DeleteMapping(value="/world")
+    public ResponseEntity<World> deleteWorld(@RequestHeader(value = "X-User", required = false) String username){
+        System.out.println("DELETE WORLD");
+
+        services.deleteWorld(username);
+
+        return ResponseEntity.ok(services.getWorld(username));
     }
 
 
@@ -70,9 +80,5 @@ public class Webservices {
             return null;
         }
     }
-
-
-
-
 }
 

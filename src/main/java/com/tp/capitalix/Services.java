@@ -331,4 +331,41 @@ public class Services {
         return true;
 
     }
+
+
+    public void deleteWorld(String username) {
+        System.out.println("DELETEWORLD");
+
+        JAXBContext jaxbContext;
+        try {
+            System.out.println("DELETEWORLD");
+            //Récupération des données du monde initial
+            jaxbContext = JAXBContext.newInstance(World.class);
+            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+
+            InputStream input = getClass().getClassLoader().getResourceAsStream("world.xml");
+            World newWorld = (World) jaxbUnmarshaller.unmarshal(input);
+            assert input != null;
+            input.close();
+
+            //Récupération des données du monde actuel
+            File f = new File(path + "/" + username + "-world.xml");
+
+            world = (World) jaxbUnmarshaller.unmarshal(f);
+
+            //On garde les anges et le score
+            newWorld.setScore(world.getScore());
+            newWorld.setActiveangels(calculSuppAngels(world));
+            newWorld.setTotalangels(calculSuppAngels(world));
+
+            saveWorldToXml(newWorld, username);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private double calculSuppAngels(World world) {
+        return 150 * Math.sqrt((world.getScore() / Math.pow(10, 15))) - world.getTotalangels();
+    }
 }
