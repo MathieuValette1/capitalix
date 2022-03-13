@@ -229,7 +229,8 @@ public class Services {
                 if (nb_creation > 0){
                     /// Des produits ont été créés
 //                    System.out.println("[update_player_score] "+ nb_creation +" " + product.getName() + " on été créés");
-                    score_to_add += (nb_creation + product.getQuantite()) * product.getRevenu();
+                    double bonusAngels = (1+ world.getActiveangels()*world.getAngelbonus()/100);
+                    score_to_add += (nb_creation + product.getQuantite()) * product.getRevenu() * bonusAngels;
 //                    System.out.println("Cela a généré " + score_to_add + " revenus");
                 }
                 else{
@@ -245,7 +246,8 @@ public class Services {
                     /// Un produit a été créé
                     System.out.println("[update_player_score] "+ product.getName() + " a été créé");
                     System.out.println("Cela a rapporté: " + product.getRevenu());
-                    score_to_add += product.getRevenu() * (product.getQuantite());
+                    double bonusAngels = (1+ world.getActiveangels()*world.getAngelbonus()/100);
+                    score_to_add += product.getRevenu() * product.getQuantite() * bonusAngels;
                     product.setTimeleft(0);
                 }
                 else{
