@@ -353,7 +353,7 @@
         <pallier>
             <name>Gland</name>
             <logo>icones/os.png</logo>
-            <seuil>10000000</seuil>
+            <seuil>100000000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
@@ -362,7 +362,7 @@
         <pallier>
             <name>Enclume</name>
             <logo>icones/enclume.png</logo>
-            <seuil>50000000</seuil>
+            <seuil>500000000</seuil>
             <idcible>4</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -372,7 +372,7 @@
         <pallier>
             <name>Marteau piqueur</name>
             <logo>icones/marteaupiqueur.png</logo>
-            <seuil>100000000</seuil>
+            <seuil>1000000000</seuil>
             <idcible>5</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
@@ -381,7 +381,7 @@
         <pallier>
             <name>Chaudron en cuivre</name>
             <logo>icones/chaudron.png</logo>
-            <seuil>1 000 000 000 000</seuil>
+            <seuil>9999999999</seuil>
             <idcible>6</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
