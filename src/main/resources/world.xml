@@ -275,6 +275,15 @@
             <typeratio>vitesse</typeratio>
             <unlocked>false</unlocked>
         </pallier>
+        <pallier>
+            <name>Capitalix !!!</name>
+            <logo>icones/argent.png</logo>
+            <seuil>100</seuil>
+            <idcible>0</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
     </allunlocks>
     <upgrades>
         <pallier>
