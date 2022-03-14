@@ -299,7 +299,7 @@
             <name>Croquettes</name>
             <logo>icones/os.png</logo>
             <seuil>7000</seuil>
-            <idcible>4</idcible>
+            <idcible>3</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -354,7 +354,7 @@
             <name>Gland</name>
             <logo>icones/os.png</logo>
             <seuil>100000000</seuil>
-            <idcible>4</idcible>
+            <idcible>3</idcible>
             <ratio>2</ratio>
             <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
@@ -432,6 +432,15 @@
             <idcible>0</idcible>
             <ratio>2</ratio>
             <typeratio>vitesse</typeratio>
+            <unlocked>false</unlocked>
+        </pallier>
+        <pallier>
+            <name>Gaulois de diamant</name>
+            <logo>icones/argent.png</logo>
+            <seuil>1000000000</seuil>
+            <idcible>0</idcible>
+            <ratio>2</ratio>
+            <typeratio>gain</typeratio>
             <unlocked>false</unlocked>
         </pallier>
     </upgrades>

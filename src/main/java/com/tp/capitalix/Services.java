@@ -293,7 +293,10 @@ public class Services {
 
         PallierType upgrade = findUpgradeByName(world, newUpgrade.getName());
 
-        if (newUpgrade.getIdcible() == 0){
+        if(newUpgrade.getIdcible() == -1){
+            System.out.println("UPGRADE productivité ANGE");
+        }
+        else if (newUpgrade.getIdcible() == 0){
             // L'upgrade s'applique à tous les produits
             for (ProductType productType: world.getProducts().getProduct()){
                 if (upgrade.getTyperatio() == TyperatioType.VITESSE){
